@@ -28,3 +28,21 @@ If the user enters 3, the program should ask for the length of the triangle's ba
 If the user enters 4, the program should end.
 
 Use a module to display the menu.  Use modules to calculate and display the areas of each shape.  The program should validate the input.  The program should continue until the user chooses the quit option on the menu.
+
+-----------------------------------------------------------------------------------------
+# Explanation of the code:
+
+We start by importing the math module for mathematical operations like π (pi).
+
+The display_menu() function prints the menu to the console.
+
+There are three functions to calculate areas (calculate_circle_area, calculate_rectangle_area, and calculate_triangle_area) with the respective formulas for each geometric shape.
+
+get_positive_input() is a utility function that asks the user for input until they provide a valid positive number. It uses a while True loop that continues to prompt the user until the correct input is received.
+
+The main() function contains the main program loop. It calls display_menu() and then waits for the user's choice. Based on the input, it calls the appropriate area calculation function or breaks the loop if the user chooses to quit.
+
+The if __name__ == "__main__": block checks if the script is running as the main program and if it is, it calls the main() function to start the program.
+
+To run the program, save the code in a .py file and execute it with Python interpreter. The program will repeatedly display the menu until the user chooses the option to quit by entering 4.
+-------------------------------------------------------------------------------------------

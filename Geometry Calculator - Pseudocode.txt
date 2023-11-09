@@ -1,0 +1,63 @@
+// Geometry Calculator - Pseudocode
+
+Constant PI = 3.14159
+
+Module Main()
+	Declare Integer selection
+	Do
+		Call DisplayMenu(selection)
+
+		If choice == 1 Then
+			Call CalculateCircleArea()
+		Else If choice == 2 Then
+			Call CalculateRectangleArea()
+		Else If choice == 3 Then
+			Call CalculateTriangleArea()
+		End If
+	Loop While choice != 4
+End Module
+
+Module DisplayMenu(Integer Ref selection)
+	Display "Geometry Calculator"
+	Display "1. Calculate the Area of a Circle"
+	Display "2. Calculate the Area of a Rectangle"
+	Display "3. Calculate the Area of a Triangle"
+	Display "4. Quit"
+	Display "Enter your choice (1—4): "
+End Module
+
+	Module CalculateCircleArea()
+	Declare Real radius
+	Declare Real area
+	Display "Enter the radius of the circle: "
+	Input radius
+	If radius > 0 Then
+		Set area = PI * radius * radius
+		Display "The area of the circle is ", area
+End Module
+
+Module CalculateRectangleArea()
+	Declare Real length
+	Declare Real width
+	Declare Real area
+	Display "Enter the length of the rectangle: "
+	Input length
+	Display "Enter the width of the rectangle: "
+	Input width
+	If length > 0 AND width > 0 Then
+		Set area = length * width
+		Display "The area of the rectangle is ", area
+End Module
+
+Module CalculateTriangleArea()
+	Declare Real base
+	Declare Real height
+	Declare Real area
+	Display "Enter the length of the triangle's base: "
+	Input base
+	Display "Enter the height of the triangle: "
+	Input height
+	If base > 0 AND height > 0 Then
+		Set area = base * height * 0.5
+		Display "The area of the triangle is ", area
+End Module
